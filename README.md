@@ -69,6 +69,20 @@ Proyek ini bertujuan untuk menganalisis faktor-faktor yang memengaruhi *attritio
 
 ---
 
+## Setup Environment
+
+### 1. Membuat Virtual Environment
+Gunakan *virtual environment* untuk mengisolasi dependensi proyek:
+
+# Buat virtual environment
+```python -m venv venv```
+
+# Aktifkan virtual environment
+```venv\Scripts\activate```
+
+# Install Dependencies
+``` pip install -r requirements.txt ```
+
 ## Akses Dashboard
 - **Link Dashboard**: [Dashboard Jaya Jaya Maju - Analisis Attrition](#) *(Link akan tersedia setelah dashboard dipublikasikan di Metabase)*
 
