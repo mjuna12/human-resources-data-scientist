@@ -5,6 +5,39 @@ Proyek ini bertujuan untuk menganalisis faktor-faktor yang memengaruhi *attritio
 
 ---
 
+## Permasalahan Bisnis
+Perusahaan Jaya Jaya Maju menghadapi tingkat attrition yang tinggi, khususnya pada departemen tertentu. Hal ini memengaruhi stabilitas operasional perusahaan serta meningkatkan biaya rekrutmen dan pelatihan untuk menggantikan karyawan yang keluar. Beberapa masalah utama yang dihadapi adalah:
+
+1. **Gaji Tidak Kompetitif**: Beberapa karyawan merasa gaji yang diterima tidak sebanding dengan kontribusi mereka.
+2. **Kepuasan Kerja Rendah**: Lingkungan kerja dan dukungan manajerial tidak mendukung perkembangan karier karyawan.
+3. **Beban Kerja Tinggi**: Terutama pada departemen dengan attrition rate tertinggi, seperti Produksi dan IT.
+
+### Tujuan Bisnis
+- Menurunkan tingkat attrition dengan memahami faktor-faktor penyebab utama.
+- Memberikan rekomendasi strategis berbasis data untuk meningkatkan retensi karyawan.
+- Mengurangi biaya rekrutmen dan pelatihan akibat pergantian karyawan.
+
+---
+
+## Cakupan Proyek
+Proyek ini meliputi langkah-langkah berikut:
+
+1. **Eksplorasi Data (Data Understanding)**:
+   - Memahami distribusi data seperti gaji, kinerja, usia, masa kerja, dan tingkat kepuasan kerja.
+   - Mengetahui hubungan antar variabel untuk mengidentifikasi faktor risiko.
+
+2. **Analisis Data**:
+   - Menggunakan teknik analisis statistik dan visualisasi untuk mengungkap pola attrition.
+   - Menerapkan model prediktif untuk mengidentifikasi karyawan berisiko tinggi keluar.
+
+3. **Dashboard Visualisasi**:
+   - Membuat dashboard interaktif untuk menyampaikan insight kepada manajemen.
+
+4. **Rekomendasi dan Strategi Mitigasi**:
+   - Memberikan langkah-langkah konkret untuk meningkatkan kepuasan kerja dan retensi karyawan.
+
+---
+
 ## Visualisasi Dashboard dan Insight
 
 ### 1. **Rata-rata Gaji dan Kinerja Karyawan**
