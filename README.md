@@ -40,7 +40,7 @@ Proyek ini meliputi langkah-langkah berikut:
 
 ## Visualisasi Dashboard dan Insight
 
-![Dashboard Attrition Jaya Jaya Maju](mjuna-dashboard.jpg)  
+![mjuna-dashboard](https://github.com/user-attachments/assets/d635c91c-b326-41e4-a195-5f23a7e6fbe0)
 
 ### 1. **Rata-rata Gaji dan Kinerja Karyawan**
 - **Visualisasi**: Scatter plot atau bar chart yang menggambarkan hubungan antara gaji bulanan dan kinerja karyawan.
