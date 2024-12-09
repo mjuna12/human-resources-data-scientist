@@ -74,7 +74,78 @@ try:
 except Exception as e:
   print(f"An error occurred: {e}")
 
-"""## Modeling & Evaluation
+"""# Data Visualizaztion
+
+2. Analisis Univariate
+
+Distribusi Data Numerik
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Histogram
+plt.figure(figsize=(10, 6))
+sns.histplot(data['Age'], kde=True)
+plt.title('Distribusi Usia Karyawan')
+plt.xlabel('Usia')
+plt.ylabel('Frekuensi')
+plt.show()
+
+# Box Plot
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Attrition', y='MonthlyIncome', data=data)
+plt.title('Box Plot Pendapatan Bulanan berdasarkan Attrition')
+plt.xlabel('Attrition')
+plt.ylabel('Pendapatan Bulanan')
+plt.show()
+
+"""Distribusi Data Kategorikal"""
+
+plt.figure(figsize=(8, 5))
+sns.countplot(x='Attrition', data=data)
+plt.title('Distribusi Attrition')
+plt.xlabel('Attrition')
+plt.ylabel('Jumlah')
+plt.show()
+
+"""Insight dari Analisis Univariate:
+
+Distribusi Usia Karyawan:
+- Dari histogram Age, terlihat bahwa sebagian besar karyawan berusia antara 30-40 tahun. Distribusi data cenderung normal (bell-shaped) tetapi sedikit miring ke kanan (right-skewed) menandakan ada beberapa karyawan yang berusia lebih tua.
+- Distribusi Attrition: Dari count plot Attrition, terlihat bahwa sebagian besar karyawan tidak mengalami attrition (No). Namun, ada sejumlah karyawan yang mengalami attrition (Yes), yang menjadi fokus perhatian kita.
+- Box Plot Pendapatan Bulanan berdasarkan Attrition: Karyawan yang mengalami attrition cenderung memiliki pendapatan bulanan yang lebih rendah dibandingkan dengan karyawan yang tidak mengalami attrition. Terdapat outlier pada karyawan yang tidak mengalami attrition (No), menandakan ada beberapa karyawan dengan pendapatan bulanan yang sangat tinggi.
+-Distribusi Data Kategorikal lainnya: Dari count plot variabel kategorikal lainnya seperti BusinessTravel, Department, Gender, dll., kita bisa melihat distribusi masing-masing kategori dan mengidentifikasi kategori yang dominan atau minoritas.
+
+Analisis Bivariate
+
+Korelasi antara Variabel Numerik
+"""
+
+plt.figure(figsize=(12, 8))
+sns.heatmap(data[['Age', 'DailyRate', 'DistanceFromHome', 'HourlyRate', 'MonthlyIncome']].corr(), annot=True, cmap='coolwarm')
+plt.title('Korelasi antara Variabel Numerik')
+plt.show()
+
+"""Hubungan antara Variabel Kategorikal"""
+
+pd.crosstab(data['Attrition'], data['Department']).plot(kind='bar', stacked=True, figsize=(10, 6))
+plt.title('Hubungan antara Attrition dan Department')
+plt.xlabel('Attrition')
+plt.ylabel('Jumlah')
+plt.show()
+
+"""Insight dari Analisis Bivariate:
+
+- Korelasi antara Variabel Numerik: Dari heatmap, terlihat bahwa ada korelasi positif yang moderat antara Age dan MonthlyIncome. Artinya, semakin tua usia karyawan, cenderung semakin tinggi pendapatan bulanannya.
+- Hubungan antara Attrition dan Pendapatan Bulanan: Dari box plot, kita sudah melihat bahwa karyawan yang mengalami attrition cenderung memiliki pendapatan bulanan yang lebih rendah. Hal ini menunjukkan bahwa pendapatan bulanan bisa menjadi salah satu faktor yang mempengaruhi attrition.
+- Hubungan antara Attrition dan Department: Dari stacked bar chart, terlihat bahwa proporsi karyawan yang mengalami attrition berbeda-beda di setiap department. Misalnya, department Sales dan Research & Development memiliki proporsi attrition yang relatif lebih tinggi dibandingkan dengan department Human Resources.
+- Hubungan antara Variabel Kategorikal dan Numerik lainnya: Dari box plot atau violin plot lainnya, kita bisa melihat bagaimana variabel numerik terdistribusi di setiap kategori variabel kategorikal. Ini dapat memberikan insight tentang perbedaan karakteristik antar kategori.
+Insight dari Identifikasi Outlier:
+
+- Outlier yang terdeteksi pada variabel numerik seperti MonthlyIncome perlu diinvestigasi lebih lanjut. Outlier ini bisa jadi merupakan data yang valid (misalnya, karyawan dengan posisi tinggi) atau bisa juga merupakan kesalahan input data.
+
+## Modeling & Evaluation
 
 ## Random Forest Model
 """
